@@ -9,7 +9,7 @@ Want to make file management easier?
 [✨ Author →](https://github.com/TLcut)
    
      
-```Add the folder "FH",then creat a new file names "TL.fs"```
+```Open the folder then click the file names "test.fh"```
         
 # Grammar
 > 📂How to add a file or a folder📂
