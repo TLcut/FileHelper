@@ -1,0 +1,3 @@
+ADD(index,folder);
+ADD(index.txt,file);
+DELETE(index.js);
