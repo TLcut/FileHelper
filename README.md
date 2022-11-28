@@ -20,10 +20,6 @@ Want to make file management easier?
 ```
   DELETE(檔案名稱,檔案類型);
 ```
-> Then...put your file in the folder?
-```
-  PUT(檔案名稱,資料夾名稱)
-```
 ***
 ## ✨Finish ! Isn't easy?✨
 </div>
