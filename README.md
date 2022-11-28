@@ -18,7 +18,7 @@ Want to make file management easier?
 ```
 > Delete a file?
 ```
-  DELETE(檔案名稱);
+  DELETE(檔案名稱,檔案類型);
 ```
 > Then...put your file in the folder?
 ```
