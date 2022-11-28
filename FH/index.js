@@ -22,10 +22,10 @@ fs.readFile('test.fh',(err,data)=>{
     console.log("你寫入的:"+mathod);
     mathod.forEach((e3,i3)=>{
         console.log(arr[i3].substring(mathod[i3].length+1,arr[i3].length-1));
+        let add = arr[i3].substring(mathod[i3].length+1,arr[i3].length-1).split(',');
         switch(e3){
             case"ADD":
                 console.log(e3)
-                let add = arr[i3].substring(mathod[i3].length+1,arr[i3].length-1).split(',');
                 if(add[1]==='file'){
                     fs.appendFile("./"+add[0],"",(err)=>{
                         if(err)throw err;
@@ -41,6 +41,20 @@ fs.readFile('test.fh',(err,data)=>{
                     } 
                 }
             break;
+            case"DELETE":
+                if(add[1]==='file'){
+                    fs.unlink("./"+add[0],(err)=>{
+                        if (err) throw err;
+                        console.log('file Deleted!');
+                    })
+                }
+                else if(add[1] = 'folder'){
+                    fs.rmdir("./"+add[0],(err)=>{
+                        if (err) throw err;
+                        console.log('Folder Deleted!');
+                    })
+                }
+            break; 
         }
     })
 })
