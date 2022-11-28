@@ -42,13 +42,13 @@ fs.readFile('test.fh',(err,data)=>{
                 }
             break;
             case"DELETE":
-                if(add[1]==='file'){
+                if(add[1]==='file'&&fs.existsSync("./"+add[0])){
                     fs.unlink("./"+add[0],(err)=>{
                         if (err) throw err;
                         console.log('file Deleted!');
                     })
                 }
-                else if(add[1] = 'folder'){
+                else if(add[1] = 'folder'&&fs.existsSync("./"+add[0])){
                     fs.rmdir("./"+add[0],(err)=>{
                         if (err) throw err;
                         console.log('Folder Deleted!');
