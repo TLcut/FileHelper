@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://upload.cc/i1/2022/11/28/80nMJW.png" alt="Linelib Horizontal Image" />
 
-# 🍃File Helper🍃
+# 👊File Helper🤟
 Want to make file management easier?
 
 [✨ Open source project →](https://github.com/TLcut/FileHelper)   
