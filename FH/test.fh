@@ -1,3 +1,4 @@
-ADD(index,folder);
-ADD(index.txt,file);
-DELETE(index.js);
+ADD(a,folder);
+RENAME(a,b);
+RENAME(b,a);
+DELETE(b,folder);
