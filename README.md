@@ -20,6 +20,10 @@ Want to make file management easier?
 ```
   DELETE(檔案名稱,檔案類型);
 ```
+>Oh no!The file names wrong!
+```
+  RENAME(前檔案名稱,要改為的新名稱);
+```
 ***
 ## ✨Finish ! Isn't easy?❤
 </div>
