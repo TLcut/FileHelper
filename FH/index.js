@@ -29,14 +29,14 @@ fs.readFile('test.fh',(err,data)=>{
                 if(add[1]==='file'){
                     fs.appendFile("./"+add[0],"",(err)=>{
                         if(err)throw err;
-                        console.log('Updated file!');
+                        console.log('Updated File '+add[0]);
                     })
                 }
                 else if(add[1]==='folder'){
                     if(!fs.existsSync("./"+add[0])){
                         fs.mkdir("./"+add[0],(err)=>{
                             if (err) throw err;
-                            console.log('Updated folder!');
+                            console.log('Updated Folder '+add[0]);
                         })
                     } 
                 }
@@ -45,13 +45,13 @@ fs.readFile('test.fh',(err,data)=>{
                 if(add[1]==='file'&&fs.existsSync("./"+add[0])){
                     fs.unlink("./"+add[0],(err)=>{
                         if (err) throw err;
-                        console.log('file Deleted!');
+                        console.log('Deleted File '+add[0]);
                     })
                 }
                 else if(add[1] = 'folder'&&fs.existsSync("./"+add[0])){
                     fs.rmdir("./"+add[0],(err)=>{
                         if (err) throw err;
-                        console.log('Folder Deleted!');
+                        console.log('Deleted Folder '+add[0]);
                     })
                 }
             break; 
