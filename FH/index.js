@@ -10,7 +10,7 @@ fs.readFile('test.fh',(err,data)=>{
     arr.length = arr.length-1;
     console.log(FH+"\n運行中......\n");
     let mathod =[];
-    const prifix = ['ADD(','DELETE('];
+    const prifix = ['ADD(','DELETE(','RENAME('];
     arr.forEach( (e,i) => {
         prifix.forEach( (e2,i2) => {
             if(e.substring(0,e2.length)===e2){
@@ -40,6 +40,9 @@ fs.readFile('test.fh',(err,data)=>{
                         })
                     } 
                 }
+                else{
+                    console.log('Updated Folder failure');
+                }
             break;
             case"DELETE":
                 if(add[1]==='file'&&fs.existsSync("./"+add[0])){
@@ -54,7 +57,21 @@ fs.readFile('test.fh',(err,data)=>{
                         console.log('Deleted Folder '+add[0]);
                     })
                 }
-            break; 
+                else{
+                    console.log('Deleted Folder failure');
+                }
+            break;
+            case"RENAME":
+                if(fs.existsSync("./"+add[0])&&!fs.existsSync("./"+add[1])){
+                    fs.rename(add[0],add[1],(err)=>{
+                        if(err)throw err;
+                        console.log(`Rename ${add[0]} to ${add[1]}`);
+                    })
+                }
+                else{
+                    console.log(`Rename failure`);
+                }
+            break;
         }
     })
 })
