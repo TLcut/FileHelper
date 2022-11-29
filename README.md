@@ -4,7 +4,7 @@
 # 👊File Helper🤟
 Want to make file management easier?
 
-[✨ Open source project →](https://github.com/TLcut/FileHelper)   
+[💫 Open source project →](https://github.com/TLcut/FileHelper)   
      
 [✨ Author →](https://github.com/TLcut)
    
